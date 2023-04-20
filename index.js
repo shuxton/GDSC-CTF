@@ -7,7 +7,7 @@ var app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.static(__dirname + "/public"));
-app.set("views", "./views");
+app.set("views", path.join(__dirname, 'views'));
 app.set("view engine", "ejs");
 
 //add your set here
