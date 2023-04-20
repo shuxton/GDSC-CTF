@@ -1,0 +1,18 @@
+<h1>GDSC UVCE Presents Capture the flag!</h1>
+
+<table>
+  <tr>
+    <th>Challenge</th>
+    <th>Created By</th>
+    <th>Points</th>
+    <th>Hint</th>
+  </tr>
+  <%challenges.forEach((val,index)=>{%>
+  <tr>
+    <td><a href="<%=val.id%>">Challenge - <%=val.id%></a></td>
+    <td><%=val.creator%></td>
+    <td><%=val.points%></td>
+    <td><%=val.comment%></td>
+  </tr>
+  <%})%>
+</table>
