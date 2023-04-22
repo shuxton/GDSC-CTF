@@ -6,6 +6,7 @@ const challenges = [
     creator: "Shubham",
     comment: "Luffy suggests you to meet Stegan San",
     points: 20,
+    answer:"Flag:gomu gomu no red hawk"
   },
   {
     id: 2,
@@ -13,6 +14,7 @@ const challenges = [
     creator: "Shubham",
     comment: "This is for Wall E",
     points: 20,
+    answer:"Flag:I don't want to survive I want to live"
   },
   {
     id: 3,
@@ -20,6 +22,7 @@ const challenges = [
     creator: "Shubham",
     comment: "I love salads",
     points: 20,
+    answer:"Flag:Caesar loves Salad"
   },
   {
     id: 4,
@@ -27,6 +30,7 @@ const challenges = [
     creator: "Shubham",
     comment: "Coming soon",
     points: 20,
+    answer:""
   },
   {
     id: 5,
@@ -34,13 +38,15 @@ const challenges = [
     creator: "Shubham",
     comment: "16",
     points:20,
+    answer:""
   },
   {
     id: 6,
-    description: "SSL login",
+    description: "SSH login",
     creator: "Shubham",
     comment: "Coming soon",
     points:20,
+    answer:""
   },
 ];
 
