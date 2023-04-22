@@ -1,0 +1,50 @@
+<form
+  action="/submit"
+  method="post"
+  enctype="multipart/form-data"
+  id="form"
+  name="form"
+>
+  <input type="file" id="answers" name="answers" />
+  <select name="id" id="id" onchange="updateAction()">
+    <option selected disabled>Select your team</option>
+    <%users.forEach((val,index)=>{%>
+    <option value="<%=val._id%>"><%=val.teamName%></option>
+    <%})%>
+  </select>
+  <button type="submit">Submit</button>
+</form>
+
+
+<table>
+    <tr>
+      <th>Team No.</th>
+      <th>Team Name</th>
+      <th>Participants</th>
+      <th>Answered</th>
+      <th>Score</th>
+    </tr>
+    <%leaderboard?.forEach((val,index)=>{ %>
+        <tr>
+          <td><%=index%></td>
+          <td><%=val.teamName%></td>
+          <td>
+            <ul>
+              <%val.participants?.forEach((p,i)=>{%>
+              <li><%=p%></li>
+              <%})%>
+            </ul>
+          </td>
+          <td><%=val.answered%></td>
+          <td><%=val.score%></td>
+        </tr>
+        <%})%>
+  </table>
+
+<script>
+  var select = document.querySelector("#id");
+
+  function updateAction() {
+    document.form.action = "/submit/" + select.value;
+  }
+</script>

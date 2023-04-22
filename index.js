@@ -4,8 +4,10 @@ var path = require("path");
 const { challenges } = require("./challenges");
 const { set1 } = require("./routes/set1");
 const fileUpload = require("express-fileupload");
+const cookieParser = require('cookie-parser');
 
 var app = express();
+app.use(cookieParser());
 app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 app.use(
@@ -46,13 +48,29 @@ app.get("/", (req, res) => {
   res.render("homepage", { challenges });
 });
 
+app.get("/leaderboard", async (req, res) => {
+  var leaderboard = await (await User.find({})).map((val,key)=>{
+    return{
+      teamName:val.teamName,
+      participants:val.participants,
+      answered:val.answered,
+      score:val.score
+    }
+  })
+  var teamNames = await (await User.find({})).map((val,key)=>{
+    return{
+      teamName:val.teamName,
+      _id:val._id
+    }
+    
+  })
+  res.render("leaderboard", { users:teamNames,leaderboard });
+});
+
 app.post("/submit/:id", async (req, res) => {
-  //64436a01e8f157a6beb29f15
   if (!req.files) {
     return res.status(400).send("No files were uploaded.");
   }
-
-  // The name of the input field (i.e. "sampleFile") is used to retrieve the uploaded file
   let answersFile = req.files.answers;
   let answers = [];
   let password = "";
@@ -75,7 +93,7 @@ app.post("/submit/:id", async (req, res) => {
       .send("The text in file does not comply with GDSC CTF standards.");
   }
   try {
-    let user = await User.findById("64436a01e8f157a6beb29f15");
+    let user = await User.findById(req.params.id);
     if (!user) {
       return res.status(404).send("Team not found");
     }
@@ -117,6 +135,4 @@ app.get("/create", async (req, res) => {
   }
 });
 
-app.get("/submit", (req, res) => {
-  res.render("submit");
-});
+
