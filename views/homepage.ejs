@@ -1,17 +1,48 @@
-<h1>GDSC UVCE Presents Capture the flag! <a href="/leaderboard">Leaderboard</a></h1>
-<table>
-  <tr>
-    <th>Challenge</th>
-    <th>Created By</th>
-    <th>Points</th>
-    <th>Hint</th>
-  </tr>
-  <%challenges.forEach((val,index)=>{%>
-  <tr>
-    <td><a href="<%=val.id%>">Challenge - <%=val.id%></a></td>
-    <td><%=val.creator%></td>
-    <td><%=val.points%></td>
-    <td><%=val.comment%></td>
-  </tr>
-  <%})%>
-</table>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
+    <link rel="stylesheet" href="assets/css/Header---Apple.css">
+    <link rel="stylesheet" href="assets/css/Navbar-With-Button-icons.css">
+    <link rel="stylesheet" href="assets/css/Pretty-Header-.css">
+    <link rel="stylesheet" href="assets/css/responsive-blog-card-slider.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-md py-3" style="padding-right: 15px;padding-left: 15px;height: 10vh;width: 100vw;background: var(--bs-gray-300);">
+        <div class="container-fluid"><a class="navbar-brand d-flex align-items-center" href="index.html"><span><img class="img-fluid" src="assets/img/small-logo-removebg-preview.png" width="89" height="89"></span><span style="padding-left: 18px;">GDSC UVCE</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-2"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-2">
+                <ul class="navbar-nav ms-auto"></ul><a class="btn btn-primary ms-md-2" role="button" href="/leaderboard">Leaderboard</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container-fluid text-center d-lg-flex justify-content-lg-center align-items-lg-center" style="width: 100vw;height: 90vh;padding-bottom: 100px;">
+        <div class="text-center blog-slider">
+            <div class="blog-slider__wrp swiper-wrapper">
+
+                <%challenges.forEach((val,index)=>{%>
+                <div class="blog-slider__item swiper-slide">
+                    <div class="blog-slider__img"><img src="https://res.cloudinary.com/muhammederdem/image/upload/v1535759872/kuldar-kalvik-799168-unsplash.jpg"></div>
+                    <div class="blog-slider__content"><span class="blog-slider__code">By <%=val.creator%>, <%=val.points%> points</span>
+                        <div class="blog-slider__title">
+                            <p>Challenge - <%=val.id%></p>
+                        </div>
+                        <div class="blog-slider__text">
+                            <p><%=val.comment%></p>
+                        </div><a class="blog-slider__button" href="<%=val.id%>">Open</a>
+                    </div>
+                </div>
+                <%})%>
+
+            </div>
+            <div class="blog-slider__pagination"></div>
+        </div>
+    </div>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/responsive-blog-card-slider-01-swiper-bundle.min.js"></script>
+    <script src="assets/js/responsive-blog-card-slider-02-responsive-blog-card-slider.js"></script>
+</body>
