@@ -38,7 +38,8 @@
 
 .blog-slider__item {
   display: flex;
-  align-items: right;
+  align-items: center;
+  width: 100%;
 }
 
 @media screen and (max-width: 768px) {
