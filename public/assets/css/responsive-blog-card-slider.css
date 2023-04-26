@@ -39,7 +39,6 @@
 .blog-slider__item {
   display: flex;
   align-items: center;
-  width: 100%;
 }
 
 @media screen and (max-width: 768px) {
@@ -172,6 +171,7 @@
 
 .blog-slider__content {
   padding-right: 25px;
+  width: (100%-300px);
 }
 
 @media screen and (max-width: 768px) {
