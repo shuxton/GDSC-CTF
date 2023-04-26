@@ -7,7 +7,6 @@ const fileUpload = require("express-fileupload");
 const cookieParser = require('cookie-parser');
 
 var app = express();
-app.use(express.static(__dirname + '/views/assets'));
 app.use(cookieParser());
 app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
