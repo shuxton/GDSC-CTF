@@ -1,5 +1,5 @@
 var swiper = new Swiper(".blog-slider", {
-  spaceBetween: 50 ,
+  spaceBetween: 30 ,
   effect: "fade",
   loop: true,
   speed: 500,
