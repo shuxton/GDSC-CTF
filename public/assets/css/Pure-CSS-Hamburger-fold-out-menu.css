@@ -51,7 +51,7 @@
 #menuToggle input:checked ~ span {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
-  background: #232323;
+  background: #ffffff;
 }
 
 #menuToggle input:checked ~ span:nth-last-child(3) {
@@ -71,7 +71,7 @@
   margin: -70px 0 0 -180px;
   padding: 50px;
   padding-top: 125px;
-  background: #ededed;
+  background: #232526;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   transform-origin: 0% 0%;
