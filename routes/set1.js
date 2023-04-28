@@ -47,6 +47,47 @@ set1.get("/robots.txt", function (req, res) {
   );
 });
 
+set1.get("/8", (req, res) => {
+  res.render("set1/challenge8");
+});
+
+set1.post("/8", (req, res) => {
+const password = req.body.password;
+try{
+if(password.trim().toUpperCase().includes('OR') && password.trim().includes("=")){
+  return res.status(200).send("Flag:SQL successfully injected")
+}else{
+  return res.status(400).render("er",{ msg:"Incorrect password" });
+
+}
+}catch(e){
+  return res.status(500).render("er",{ msg:"Something went wrong" })
+}
+});
+
+set1.get("/9", (req, res) => {
+  res.render("set1/challenge9");
+});
+
+set1.get("/10", (req, res) => {
+  res.render("set1/challenge10"); 
+});
+
+set1.get("/11", (req, res) => {
+  res.render("set1/challenge11");
+});
+
+set1.get("/12", (req, res) => {
+  res.render("set1/challenge12");
+});
+
+set1.get("/13", (req, res) => {
+  res.render("set1/challenge13");
+});
+
+set1.get("/14", (req, res) => {
+  res.render("set1/challenge14");
+});
 module.exports = {
   set1,
 };
