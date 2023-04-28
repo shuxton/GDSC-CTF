@@ -1,4 +1,4 @@
-<html lang="en">
+<html lang="en" style="overflow: hidden;">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -15,11 +15,10 @@
 </head>
 
 <body>
-    <div id="preloader" style="z-index: 9999;"></div>
     <div id="main" style="z-index: 99;">
         <nav class="navbar navbar-light navbar-expand-md py-3" style="padding-right: 15px;padding-left: 15px;height: 10vh;width: 100vw;">
           
-            <div class="container-fluid"><a class="navbar-brand d-flex align-items-center" href="/"><span><img class="img-fluid" src="/assets/img/small-logo-removebg-preview.png" width="48" height="48"></span><span class="color_white content__title" style="padding-left: 7px; color:white; font-size: 16px;">GDSC UVCE</span><span class="vim-caret" style="color: white;">&nbsp</span></a><nav role="navigation">
+            <div class="container-fluid"><a class="navbar-brand d-flex align-items-center" href="/"><span><img class="img-fluid" src="/assets/img/small-logo-removebg-preview.png" width="48" height="48"></span><span class="color_white content__title" style="padding-left: 7px; color:white; font-size: 16px;">GDSC UVCE</span></a><nav role="navigation">
                 <!--
                 <div id="menuToggle">
                     <input type="checkbox" />
@@ -31,23 +30,31 @@
                     </ul>
                 </div>
                 -->
-                <a class="btn btn-primary btn-shadow px-3 my-2 ml-0 ml-sm-1 text-left" role="tton" href="/leaderboard" style="color: white;">Leaderboard</a>
+                <button class="btn btn-danger btn-shadow px-3 my-2 ml-0 ml-sm-1 text-left" onclick="history.back()">Go Back</button>
             </div>
         </nav>
+
+        <div style="position: absolute;">
+            <img src="/assets/img/glitch_2-o.gif">
+        </div>
         
-        <div class="container py-5" style="margin-top: -50px;">
+        <div class="container py-5" style="margin-top: 20vh;">
             <div class="row py-5">
                 <div class="col-lg-10 mx-auto">
                     <div class="card rounded border-0" style="box-shadow: 4px 13px 30px 5px #9CECFB55;">
                         <div class="card-body p-5 rounded">
                             <div class="d-lg-flex justify-content-lg-center align-items-lg-center text-center">
-                                <h1><%- msg %></h1>                            
+                                <h1 style="font-size: 30px;"><%- msg %><span class="vim-caret">&nbsp;</span></h1>                            
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+
+    <div style="position: absolute; margin-left: 70vw; margin-top: 10vh;">
+        <img src="/assets/img/glitch_3-o.gif">
     </div>
 
 
