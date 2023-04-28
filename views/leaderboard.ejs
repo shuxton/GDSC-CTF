@@ -1,4 +1,4 @@
-<html lang="en">
+<html lang="en" style="overflow-x: hidden;-webkit-overflow-scrolling: touch;"">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -15,7 +15,7 @@
 </head>
 
 <body>
-  <div id="preloader" style="z-index: 9999;"></div>
+  <div id="preloader" style="z-index: 9999; position: fixed;"></div>
   <div id="main" style="z-index: 99;">
       <nav class="navbar navbar-light navbar-expand-md py-3" style="padding-right: 15px;padding-left: 15px;height: 10vh;width: 100vw;">
           
@@ -31,7 +31,7 @@
                   </ul>
               </div>
               -->
-              <a class="btn btn-primary btn-shadow px-3 my-2 ml-0 ml-sm-1 text-left" role="tton" href="/leaderboard" style="color: white;">Leaderboard</a>
+              <a class="btn btn-secondary btn-shadow px-3 my-2 ml-0 ml-sm-1 text-left" role="tton" href="/" style="color: #373B44;">Questions</a>
           </div>
       </nav>
 
@@ -41,7 +41,7 @@
           <div class="col-lg-10 mx-auto">
             <div class="card rounded border-0" style="box-shadow: 4px 13px 30px 5px #9CECFB55;">
               <div class="card-body p-5 rounded">
-                <h1 class="mb-5">Submit Answers</h1>
+                <h1 class="color_white content__title display-3 text-left">Submit Answers</h1>
                 <form
                 action="/submit"
                 method="post"
@@ -69,7 +69,7 @@
           <div class="col-lg-10 mx-auto">
             <div class="card rounded border-0" style="box-shadow: 4px 13px 30px 5px #9CECFB55;">
               <div class="card-body p-5 rounded">
-                  <span class="color_white content__title2 display-1 text-left">Leaderboard</span><span class="vim-caret display-1" style="color: white;">&nbsp</span>
+                  <h1 class="color_white content__title2 display-3 text-left">Hacker <span class="vim-caret display-3" style="color: white;">board</span></h1>
                 <div class="table-responsive">
                   <table id="example" style="width: 100%;" class="table table-striped table-bordered">
                     <thead>
