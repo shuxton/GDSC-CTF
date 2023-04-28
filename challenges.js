@@ -96,7 +96,25 @@ const challenges = [
     points: 60,
     answer: "flag: W1reshark_us3s_pc0png_ext3ns10n",
   },
+  {
+    id: 13,
+    description: "Audio",
+    creator: "Akhil P",
+    comment: "don't give up",
+    points: 100,
+    answer: "Flag: d0 you l1ke th3 s0ng",
+  },
+  {
+    id: 14,
+    description: "Youtube",
+    creator: "Akhil P",
+    comment: "hope you aren't addicted to it",
+    points: 50,
+    answer: "Flag:Welcome back to my channel",
+  },
 ];
 module.exports = {
   challenges,
 };
+
+

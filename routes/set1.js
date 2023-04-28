@@ -81,6 +81,13 @@ set1.get("/12", (req, res) => {
   res.render("set1/challenge12");
 });
 
+set1.get("/13", (req, res) => {
+  res.render("set1/challenge13");
+});
+
+set1.get("/14", (req, res) => {
+  res.render("set1/challenge14");
+});
 module.exports = {
   set1,
 };

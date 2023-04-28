@@ -5,7 +5,7 @@ const calculatePoints = (answers) => {
   let answered = 0;
   answers.forEach((el) => {
     const challenge = challenges.find((a) => a.id == el.id);
-    if (challenge?.answer == el.answer) {
+    if (challenge?.answer?.toLowerCase().trim() == el.answer?.toLowerCase().trim()) {
       points += challenge.points;
       answered++;
     }
