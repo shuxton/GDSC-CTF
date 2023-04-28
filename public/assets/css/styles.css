@@ -2,6 +2,24 @@
   background-color: #141E30 !important;
 }
 
+input[type=file]::file-selector-button {
+  background-color: #00000000;
+  border: none;
+  cursor: pointer;
+  color: #87c4f2;
+  border-right: 1px solid linen !important;
+  padding: 3px;                 
+}
+
+.pt:hover{
+  cursor: pointer;
+  color : linen;
+  background-color: #714cdf !important;
+}
+.clicked{
+  background-color: #412d7c !important;
+}
+
 :root {
   --color-text: #fff;
   --color-bg: #000;

@@ -49,24 +49,22 @@ app.get("/", (req, res) => {
 });
 
 app.get("/leaderboard", async (req, res) => {
-  var leaderboard = await (await User.find({})).map((val,key)=>{
+  var leaderboard = await (await User.find({}).sort({score:-1})).map((val,key)=>{
     return{
+      _id:val._id,
       teamName:val.teamName,
       participants:val.participants,
       answered:val.answered,
-      score:val.score
+      score:val.score,
     }
-  }).sort((a,b)=>a.score>b.score)
-  var teamNames = await (await User.find({})).map((val,key)=>{
-    return{
-      teamName:val.teamName,
-      _id:val._id
-    }
-    
   })
-  res.render("leaderboard", { users:teamNames,leaderboard });
+  res.render("leaderboard", { leaderboard });
 });
 
+app.post("/submit/undefined", async(req, res) => {
+  var msg = "Team Not Selected";
+  res.status(400).render("er",{ msg });
+})
 app.post("/submit/:id", async (req, res) => {
   if (!req.files) {
     var msg = "No files were uploaded.";
@@ -109,11 +107,8 @@ app.post("/submit/:id", async (req, res) => {
     user.set("answered", answered);
     user.set("previousSubmission", answersFile.data.toString());
     await user.save();
-    return res
-      .status(200)
-      .send(
-        `<p>Score ${user.score}<br/>Answered Correctly ${user.answered}<p/>`
-      );
+    var msg2 = {scr: user.score, crr: user.answered};
+    return res.status(200).render("cr", { msg2 });
   } catch (ex) {
     console.log(ex);
     var msg = "Something went wrong";
@@ -124,9 +119,9 @@ app.post("/submit/:id", async (req, res) => {
 app.get("/create", async (req, res) => {
   try {
     let user = await User.create({
-      teamName: "BhagwanKeBharose",
-      participants: ["Akhil", "Shubham", "Supreet"],
-      password: "meow",
+      teamName: "BhagwanKBharose",
+      participants: ["Akhila", "Shubhama", "aSupreet"],
+      password: "meowa",
     });
     await user.save();
     return res
