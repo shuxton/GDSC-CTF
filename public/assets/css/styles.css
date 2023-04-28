@@ -148,7 +148,9 @@ body {
   font-weight: bold;
 }
 
-h1,
+h1 {
+  font-family: 'DoctorGlitch'!important;
+}
 h2 {
   font-family: 'PhelixBoomgartner'!important;
 }

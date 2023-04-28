@@ -1,4 +1,4 @@
-<html lang="en" style="overflow: hidden;-webkit-overflow-scrolling: touch;">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -15,10 +15,10 @@
 </head>
 
 <body>
-    <div id="preloader" style="z-index: 9999; position: fixed;"></div>
+    <div id="preloader" style="z-index: 9999;"></div>
     <div id="main" style="z-index: 99;">
         <nav class="navbar navbar-light navbar-expand-md py-3" style="padding-right: 15px;padding-left: 15px;height: 10vh;width: 100vw;">
-            
+          
             <div class="container-fluid"><a class="navbar-brand d-flex align-items-center" href="/"><span><img class="img-fluid" src="/assets/img/small-logo-removebg-preview.png" width="48" height="48"></span><span class="color_white content__title" style="padding-left: 7px; color:white; font-size: 16px;">GDSC UVCE</span><span class="vim-caret" style="color: white;">&nbsp</span></a><nav role="navigation">
                 <!--
                 <div id="menuToggle">
@@ -34,33 +34,23 @@
                 <a class="btn btn-primary btn-shadow px-3 my-2 ml-0 ml-sm-1 text-left" role="tton" href="/leaderboard" style="color: white;">Leaderboard</a>
             </div>
         </nav>
-
-
-        <div class="container-fluid text-center d-lg-flex justify-content-lg-center align-items-lg-center" style="width: 100vw;height: 90vh;padding-bottom: 100px;">
-            <div class="text-center blog-slider">
-                <div class="blog-slider__wrp swiper-wrapper">
-
-                    <%challenges.forEach((val,index)=>{%>
-                    <div class="blog-slider__item swiper-slide">
-                        <div class="blog-slider__img"><img src="/assets/img/q.gif"></div>
-                        <div class="blog-slider__content">
-                            <div class="blog-slider__title">
-                                <p class="display-4" style="font-family: PhelixBoomgartner;">CHALLENGE - <%=val.id%></p>
+        
+        <div class="container py-5" style="margin-top: -50px;">
+            <div class="row py-5">
+                <div class="col-lg-10 mx-auto">
+                    <div class="card rounded border-0" style="box-shadow: 4px 13px 30px 5px #9CECFB55;">
+                        <div class="card-body p-5 rounded">
+                            <div class="d-lg-flex justify-content-lg-center align-items-lg-center text-center">
+                                <h1><%- msg %></h1>                            
                             </div>
-                            <span class="blog-slider__code">By <%=val.creator%>, <%=val.points%> points</span>
-                            <div class="blog-slider__text">
-                                <p><%=val.comment%></p>
-                            </div><a class="blog-slider__button" href="<%=val.id%>">Open</a>
                         </div>
                     </div>
-                    <%})%>
-
                 </div>
-                <div class="blog-slider__pagination"></div>
             </div>
         </div>
     </div>
-    
+
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
     <script src="/assets/js/responsive-blog-card-slider-01-swiper-bundle.min.js"></script>

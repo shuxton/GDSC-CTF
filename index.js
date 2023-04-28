@@ -69,7 +69,8 @@ app.get("/leaderboard", async (req, res) => {
 
 app.post("/submit/:id", async (req, res) => {
   if (!req.files) {
-    return res.status(400).send("No files were uploaded.");
+    var msg = "No files were uploaded.";
+    return res.status(400).render("er",{ msg });
   }
   let answersFile = req.files.answers;
   let answers = [];
@@ -88,18 +89,19 @@ app.post("/submit/:id", async (req, res) => {
     console.log(answers);
   } catch (ex) {
     console.log(ex);
-    return res
-      .status(400)
-      .send("The text in file does not comply with GDSC CTF standards.");
+    var msg = "The text in file does not comply with GDSC CTF standards.";
+    return res.status(400).render("er",{ msg });
   }
   try {
     let user = await User.findById(req.params.id);
     if (!user) {
-      return res.status(404).send("Team not found");
+      var msg = "Team not found";
+      return res.status(400).render("er",{ msg });
     }
 
     if (user.password != password) {
-      return res.status(400).send("Incorrect password!");
+      var msg = "Incorrect password!";
+      return res.status(400).render("er",{ msg });
     }
 
     const { points, answered } = calculatePoints(answers);
@@ -114,7 +116,8 @@ app.post("/submit/:id", async (req, res) => {
       );
   } catch (ex) {
     console.log(ex);
-    return res.status(500).send("Something went wrong");
+    var msg = "Something went wrong";
+    return res.status(400).render("er",{ msg });
   }
 });
 
@@ -133,6 +136,10 @@ app.get("/create", async (req, res) => {
     console.log(ex);
     return res.status(500).send("Something went wrong");
   }
+});
+
+app.get('*', function(req, res){
+  res.render("404");
 });
 
 
