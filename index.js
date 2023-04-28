@@ -40,7 +40,7 @@ db.once("open", function () {
 //add your set here
 app.use(set1);
 
-app.listen(process.env.port || 3000, function () {
+app.listen(process.env.port || 5000, function () {
   console.log("CTF server started");
 });
 
@@ -56,7 +56,7 @@ app.get("/leaderboard", async (req, res) => {
       answered:val.answered,
       score:val.score
     }
-  })
+  }).sort((a,b)=>a.score>b.score)
   var teamNames = await (await User.find({})).map((val,key)=>{
     return{
       teamName:val.teamName,
