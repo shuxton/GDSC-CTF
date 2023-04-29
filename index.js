@@ -48,6 +48,10 @@ app.get("/", (req, res) => {
   res.render("homepage", { challenges });
 });
 
+app.get("/instructions", (req, res) => {
+  res.render("instructions");
+});
+
 app.get("/leaderboard", async (req, res) => {
   var leaderboard = await (await User.find({}).sort({score:-1})).map((val,key)=>{
     return{
