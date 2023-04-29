@@ -54,7 +54,7 @@ app.get("/leaderboard", async (req, res) => {
       _id:val._id,
       teamName:val.teamName,
       participants:val.participants,
-      answered:val.answered,
+      answered:val.solvedQuestions?.join(',')||'',
       score:val.score,
     }
   })
@@ -102,10 +102,11 @@ app.post("/submit/:id", async (req, res) => {
       return res.status(400).render("er",{ msg });
     }
 
-    const { points, answered } = calculatePoints(answers);
+    const { points, answered,answeredArr } = calculatePoints(answers);
     user.set("score", points);
     user.set("answered", answered);
     user.set("previousSubmission", answersFile.data.toString());
+    user.set("solvedQuestions",answeredArr)
     await user.save();
     var msg2 = {scr: user.score, crr: user.answered};
     return res.status(200).render("cr", { msg2 });

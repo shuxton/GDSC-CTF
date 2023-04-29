@@ -12,6 +12,10 @@ var UserSchema = new Schema({
     type: Array,
     required: true,
   },
+  solvedQuestions:{
+    type:Array,
+    default:[]
+  },
   answered: {
     type: Number,
     required: true,
