@@ -118,7 +118,7 @@ const challenges = [
     description: "Brute Force",
     creator: "Supreet",
     comment: "help out zoro",
-    points: 100,
+    points: 200,
     answer: "Flag:Z0r0_15_b4d_w1th_d1r3ct10n",
   },
 ];

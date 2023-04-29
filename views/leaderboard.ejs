@@ -75,6 +75,7 @@
                           <th>Participants</th>
                           <th>Answered</th>
                           <th>Score</th>
+                          <th>Comment</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -89,8 +90,13 @@
                                 <%})%>
                               </ul>
                             </td>
-                            <td><%=val.answered%></td>
+                            <td> <ul>
+                              <%val.answered?.forEach((p,i)=>{%>
+                              <li><%=p%></li>
+                              <%})%>
+                            </ul></td>
                             <td><%=val.score%></td>
+                            <td><%=val.comment%></td>
                           </tr>
                           <%})%>
                       </tbody>

@@ -48,7 +48,7 @@ app.get("/", (req, res) => {
   res.render("homepage", { challenges });
 });
 
-app.get("/instructions", (req, res) => {
+app.get("/docs", (req, res) => {
   res.render("instructions");
 });
 
@@ -58,8 +58,9 @@ app.get("/leaderboard", async (req, res) => {
       _id:val._id,
       teamName:val.teamName,
       participants:val.participants,
-      answered:val.solvedQuestions?.join(',')||'',
+      answered:val.solvedQuestions,
       score:val.score,
+      comment:val.key
     }
   })
   res.render("leaderboard", { leaderboard });
@@ -124,9 +125,41 @@ app.post("/submit/:id", async (req, res) => {
 app.get("/create", async (req, res) => {
   try {
     let user = await User.create({
-      teamName: "BhagwanKBharose",
-      participants: ["Akhila", "Shubhama", "aSupreet"],
-      password: "meowa",
+      teamName: "Shadow",
+      participants: ["G Vaasudeva", "Mohammed Hamza", "Nanda Kishore M P"],
+      password: "999999",
+    });
+    await user.save();
+    user = await User.create({
+      teamName: "Hacksaw",
+      participants: ["Shriram SR", "Sujay Vikram"],
+      password: "hacksaw_ridge",
+    });
+    await user.save();
+    user = await User.create({
+      teamName: "Cyberpunks",
+      participants: ["Shruti singh", "Apoorva keshav", "Amrit raj","Jagan"],
+      password: "groot69",
+    });
+    await user.save();
+    user = await User.create({
+      teamName: "Hufflepuff",
+      participants: ["Christina", "Shreya N", "Kshitija","Vinayak"],
+      password: "Harry26",
+    });
+    await user.save();
+
+    user = await User.create({
+      teamName: "BIZARRE CLASH",
+      participants: ["VAISHNAVI BANWA", "LAALITHYA  PRASANNA", "ANJALI RAO","SPANDANA PATIL"],
+      password: "vincenzo",
+    });
+    await user.save();
+
+    user = await User.create({
+      teamName: "ghosts irl",
+      participants: ["Gagana Vakkund", "Gitanjali Reddy", "Veeksha"],
+      password: "meveejelly",
     });
     await user.save();
     return res
