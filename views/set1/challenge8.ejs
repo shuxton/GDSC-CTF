@@ -45,8 +45,10 @@
                                 Behind the scenes the entered data is processed using the sql query given
                                 below-
                                 <br />
-                                var sql = 'SELECT * FROM users WHERE username='+form.username+' AND
-                                password='+form.password+';'
+                                var query = 'SELECT count(*) FROM users WHERE username='+form.username+' AND
+                                password='+form.password+';'; &nbsp;
+                                <br>
+                                if(sql.execute(query)>0) allowLogin=true;
                                 <br />
                                 <br />
                                 //form.username and form.password are the values submitted using the form

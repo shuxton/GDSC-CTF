@@ -84,8 +84,8 @@ app.post("/submit/:id", async (req, res) => {
       val = val.replace("\r", "");
       keyVal = val.split("-");
       return {
-        id: parseInt(keyVal[0].trim()),
-        answer: keyVal[1].trim(),
+        id: parseInt(keyVal[0]?.trim()),
+        answer: keyVal[1]?.trim(),
       };
     });
     console.log(answers);
