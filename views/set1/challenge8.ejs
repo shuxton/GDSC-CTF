@@ -31,7 +31,7 @@
                     </ul>
                 </div>
                 -->
-                <a class="btn btn-primary btn-shadow px-3 my-2 ml-0 ml-sm-1 text-left" role="tton" href="/leaderboard" style="color: white;">Leaderboard</a>
+                <button class="btn btn-danger btn-shadow px-3 my-2 ml-0 ml-sm-1 text-left" onclick="history.back()">Go Back</button>
             </div>
         </nav>
         
@@ -40,8 +40,8 @@
                 <div class="col-lg-10 mx-auto">
                     <div class="card rounded border-0" style="box-shadow: 4px 13px 30px 5px #9CECFB55;">
                         <div class="card-body p-5 rounded">
-                            <div class="d-lg-flex justify-content-lg-center align-items-lg-center text-center">
-                              <p>
+                            <div class="text-center">
+                              <p class="text-left">
                                 Behind the scenes the entered data is processed using the sql query given
                                 below-
                                 <br />
@@ -54,13 +54,15 @@
                                 //Try to hack into this system
                               </p>
                               <form action="/8" method="post">
-                                <label for="username">Username</label>
-                                <input id="username" name="username" type="text" value="shoebum" disabled="true" />
-                                <br /><br />
-                                <label for="password">Password</label>
-                                <input id="password" name="password" type="password" pattern="[^;,<>&#39;&#34;]+" title="The following characters are not allowed < > , ; ` %"/>
-                                <br /><br />
-                                <button type="submit">Submit</button>
+                                <div class="h-100 d-flex align-items-center justify-content-center">
+                                    <label for="username" style="padding-right: 5px;">Username</label>
+                                    <input class="form-control" id="username" name="username" type="text" value="shoebum" disabled="true" style="max-width: 25%;"/>
+                                </div>
+                                <div class="h-100 d-flex align-items-center justify-content-center" style="padding-top: 10px;">
+                                    <label for="password" style="padding-right: 10px;">Password</label>
+                                    <input class="form-control"" id="password" name="password" type="password" pattern="[^;,<>&#39;&#34;]+" title="The following characters are not allowed < > , ; ` %" style="max-width: 25%;"/>
+                                </div>
+                                <button type="submit" class="btn btn-success btn-shadow px-3 my-2 ml-0 ml-sm-1 text-left" style="padding-top: 10px;">Submit</button>
                               </form>                          
                             </div>
                         </div>

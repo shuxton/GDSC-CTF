@@ -173,7 +173,7 @@ function checkCookie() {
   var user=getCookie("visited"); 
   if (user == 1) {   
     fadeOutEffect("preloader");
-    setCookie("visited", 1, 5*60); //this will update the cookie       
+    setCookie("visited", 1, 15*60); //this will update the cookie       
   } else {  
     addLog();      
     setCookie("visited", 1, 30);   
