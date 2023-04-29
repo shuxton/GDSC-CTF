@@ -112,6 +112,14 @@ const challenges = [
     points: 50,
     answer: "Flag:Welcome back to my channel",
   },
+  {
+    id: 15,
+    description: "Brute Force",
+    creator: "Supreet",
+    comment: "help out zoro",
+    points: 50,
+    answer: "Flag:Z0r0_15_b4d_w1th_d1r3ct10n",
+  },
 ];
 module.exports = {
   challenges,
