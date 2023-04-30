@@ -125,7 +125,7 @@ const challenges = [
     id:16,
     description:"Wikipedia",
     creator:"Shubham N J",
-    comment:"help sanji, he has a history",
+    comment:"help sanji, he has a history with hackers",
     points: 200,
     answer:"Flag: you f0und th3 all Blu3"
   }
