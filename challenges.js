@@ -87,7 +87,7 @@ const challenges = [
     creator: "Pavan",
     comment: "it can do more than you think",
     points: 35,
-    answer: "flag: qwerty_rot47_poiuy",
+    answer: "flag:Oqwerty_rot47_poiuy",
   },
   {
     id: 12,
@@ -121,6 +121,14 @@ const challenges = [
     points: 200,
     answer: "Flag:Z0r0_15_b4d_w1th_d1r3ct10n",
   },
+  // {
+  //   id:16,
+  //   description:"Wikipedia",
+  //   creator:"Shubham N J",
+  //   comment:"help sanji, he has a long history with zoro",
+  //   points: 150,
+  //   answer:"Flag: you f0und th3 all Blu3"
+  // }
 ];
 module.exports = {
   challenges,
