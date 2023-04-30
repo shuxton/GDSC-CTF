@@ -32,7 +32,7 @@ var UserSchema = new Schema({
   },
   score: {
     type: Number,
-    default: null,
+    default: 0,
   },
   key: {
     type: String,

@@ -91,6 +91,12 @@ set1.get("/14", (req, res) => {
 set1.get("/15", (req, res) => {
   res.render("set1/challenge15");
 });
+set1.get("/16", (req, res) => {
+  res.render("set1/challenge16");
+});
+set1.get("/all-blue", (req, res) => {
+  res.render("set1/allblue");
+});
 module.exports = {
   set1,
 };
