@@ -11,6 +11,11 @@ const calculatePoints = (answers) => {
       answered++;
       answeredArr.push(el.id)
     }
+    else if(challenge && el.id==11 && 'flag: qwerty_rot47_poiuy' == el.answer?.toLowerCase().trim()){
+      points += challenge.points;
+      answered++;
+      answeredArr.push(el.id)
+    }
   });
 
   return {points,answered,answeredArr};
