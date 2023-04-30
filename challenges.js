@@ -7,7 +7,7 @@ const challenges = [
     creator: "Shruti Singh",
     comment: "you saw it before the event started",
     points: 10,
-    answer: "Flag:D3sigN3r",
+    answer: "Flag:GDSC",
   },
   {
     id: 2,
