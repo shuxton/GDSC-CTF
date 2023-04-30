@@ -31,6 +31,7 @@
                   </ul>
               </div>
               -->
+              <a class="btn btn-warning btn-shadow px-3 my-2 ml-0 ml-sm-1 text-left" role="tton" href="/docs" style="color: white;">Docs</a>
               <a class="btn btn-info btn-shadow px-3 my-2 ml-0 ml-sm-1 text-left" role="button" href="/">Questions</a>
           </div>
       </nav>
@@ -79,9 +80,9 @@
                         </tr>
                       </thead>
                       <tbody>
-                        <%leaderboard?.forEach((val,index)=>{ %>
+                        <%leaderboard?.forEach((val,index)=>{ if(val.teamName != 'BhagwanKeBharose'){%>
                           <tr value="<%=val._id%>" class="pt">
-                            <td><%=index+1%></td>
+                            <td><%=index%></td>
                             <td id="tn"><%=val.teamName%></td>
                             <td>
                               <ul>
@@ -98,7 +99,7 @@
                             <td><%=val.score%></td>
                             <td><%=val.comment%></td>
                           </tr>
-                          <%})%>
+                          <%}})%>
                       </tbody>
                     </table>
                   </div>

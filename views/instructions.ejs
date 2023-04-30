@@ -1,4 +1,4 @@
-<html lang="en" style="overflow: hidden;-webkit-overflow-scrolling: touch;">
+<html lang="en" style="-webkit-overflow-scrolling: touch;">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -10,11 +10,8 @@
     <link rel="stylesheet" href="/assets/css/responsive-blog-card-slider.css">
     <link rel="stylesheet" href="/assets/css/Bootstrap-DataTables.css">
     <link rel="stylesheet" href="/assets/css/Pure-CSS-Hamburger-fold-out-menu.css">
-    <link rel="stylesheet" href="/assets/css/styles.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-</head>
 
-<body>
+<body style="height: max-content">
     <div id="preloader" style="z-index: 9999; position: fixed;"></div>
     <div id="main" style="z-index: 99;">
         <nav class="navbar navbar-light navbar-expand-md py-3" style="padding-right: 15px;padding-left: 15px;height: 10vh;width: 100vw;">
@@ -23,20 +20,70 @@
                 <a class="btn btn-primary btn-shadow px-3 my-2 ml-0 ml-sm-1 text-left" role="tton" href="/leaderboard" style="color: white;">Leaderboard</a>
             </div>
         </nav>
+        <!-- <div class="container-fluid">
+        <div class=" card rounded border-0 mx-auto" style="box-shadow: 4px 13px 30px 5px #9CECFB55;">
+            <div class="card-body p-5 rounded">
+                <div class="text-left">
+                    <h4 class="card-title">Docs</h4>
+                    <ul>
+                        <li>The contest contains 15 challenges and ends on 1/5/2023 11:59AM.</li>
+                        <li>Each challenge requires you to find a flag <span class="text-muted">A string of text</span>  </li>
+                        <li>For all challenges except (13), the flag begins with the word "Flag"</li>
+                        <li>The flags are not case sensitive</li>
+                        <li>Maximum points you can score - 800</li>
+                        <li>Tools that may be required - 
+                            <ul>
+                                <li>
+                                    <span class="text-muted">Most challenges require only keen observation and a tad bit of googling</span>
+                                </li>
+                                <li>
+                                    Wireshark
+                                </li>
+                                <li>
+                                    PuTTY or other ssh client
+                                </li>
+                            </ul>
+                        </li>
+                        <li>To submit your answers use the <a href="answers.txt" download>answers.txt</a> file
+                        <ol>
+                            <li>
+                                Replace password in line 1 with your team's password
+                            </li>
+                            <li>
+                                Add the flags you find next to the challenge number 
+                            </li>
+                            <li>
+                                Challenges can be solved in any order
+                            </li>
+                            <li>
+                                Visit <a href="/leaderboard">leaderboard</a> -> select your team -> upload the file -> click on submit
+                            </li>
+                        </ol>
+                        </li>
+                        <li>
+                            Answers can be uploaded multiple times in the next 24 hours.
+                        </li>
+                    </ul>    
+                    <a class="btn btn-success btn-shadow px-3 my-2 ml-0 ml-sm-1 text-left" role="tton" href="/" style="color: white;">Let's Hack</a>
+ 
+                </div>
+            </div>
+        </div>
+    </div> -->
 
-
-        <div class="container py-5" style="margin-top: -50px;">
+        <div class="container py-5" style="margin-top: -50px;min-height: 100%">
             <div class="row py-5">
                 <div class="col-lg-10 mx-auto">
                     <div class="card rounded border-0" style="box-shadow: 4px 13px 30px 5px #9CECFB55;">
                         <div class="card-body p-5 rounded">
                             <h4 class="card-title">Docs</h4>
-                            <div class="d-lg-flex justify-content-lg-center align-items-lg-center text-left">
+                            <div class="text-left">
                                 <ul>
                                     <li>The contest contains 15 challenges and ends on 1/5/2023 11:59AM.</li>
                                     <li>Each challenge requires you to find a flag <span class="text-muted">A string of text</span>  </li>
                                     <li>For all challenges except (13), the flag begins with the word "Flag"</li>
                                     <li>The flags are not case sensitive</li>
+                                    <li>Maximum points you can score - 800</li>
                                     <li>Tools that may be required - 
                                         <ul>
                                             <li>
@@ -59,6 +106,9 @@
                                             Add the flags you find next to the challenge number 
                                         </li>
                                         <li>
+                                            Challenges can be solved in any order
+                                        </li>
+                                        <li>
                                             Visit <a href="/leaderboard">leaderboard</a> -> select your team -> upload the file -> click on submit
                                         </li>
                                     </ol>
@@ -66,8 +116,9 @@
                                     <li>
                                         Answers can be uploaded multiple times in the next 24 hours.
                                     </li>
+                                    <li>Feel free to reach out to us if you still have any questions!</li>
                                 </ul>    
-                                <a class="btn btn-primary btn-shadow px-3 my-2 ml-0 ml-sm-1 text-left" role="tton" href="/" style="color: white;">Let's Hack</a>
+                                <a class="btn btn-success btn-shadow px-3 my-2 ml-0 ml-sm-1 text-left" role="tton" href="/" style="color: white;">Let's Hack</a>
              
                             </div>
                         </div>

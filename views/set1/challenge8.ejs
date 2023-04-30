@@ -54,6 +54,8 @@
                                 //form.username and form.password are the values submitted using the form
                                 <br />
                                 //Try to hack into this system
+                                <br>
+                                <span class="text-muted">There might be multiple ways to gain access but this system is vulnerable to only a specific type so keep trying</span>
                               </p>
                               <form action="/8" method="post">
                                 <div class="h-100 d-flex align-items-center justify-content-center">
@@ -62,7 +64,7 @@
                                 </div>
                                 <div class="h-100 d-flex align-items-center justify-content-center" style="padding-top: 10px;">
                                     <label for="password" style="padding-right: 10px;">Password</label>
-                                    <input class="form-control"" id="password" name="password" type="password" pattern="[^;,<>&#39;&#34;]+" title="The following characters are not allowed < > , ; ` %" style="max-width: 25%;"/>
+                                    <input class="form-control"" id="password" name="password" type="password" pattern="[^;,<>&#39;&#34;]+" title="The following characters are not allowed < > , ; ` % and quotes" style="max-width: 25%;"/>
                                 </div>
                                 <button type="submit" class="btn btn-success btn-shadow px-3 my-2 ml-0 ml-sm-1 text-left" style="padding-top: 10px;">Submit</button>
                               </form>                          

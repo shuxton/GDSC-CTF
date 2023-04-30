@@ -86,7 +86,7 @@ const challenges = [
     description: "Python Script",
     creator: "Pavan",
     comment: "it can do more than you think",
-    points: 30,
+    points: 35,
     answer: "flag: qwerty_rot47_poiuy",
   },
   {
@@ -94,7 +94,7 @@ const challenges = [
     description: "Wireshark",
     creator: "Pavan",
     comment: "corrupted file has alternatives",
-    points: 60,
+    points: 100,
     answer: "flag: W1reshark_us3s_pc0png_ext3ns10n",
   },
   {
@@ -102,7 +102,7 @@ const challenges = [
     description: "Audio",
     creator: "Akhil P",
     comment: "don't give up",
-    points: 70,
+    points: 100,
     answer: "d0 you l1ke th3 s0ng",
   },
   {
